@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Fuel Dashboard · Prices, Taxes &amp; Subsidies 2020–2026</title>
+<style>
+:root{--bg:#fbf8f3;--surface:#fff;--ink:#1d2430;--muted:#5d6675;--line:#e5dfd3;--accent:#e8821e;--blue:#4e79a7;--red:#e15759;--teal:#76b7b2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161d;--surface:#1b212b;--ink:#eef1f5;--muted:#a1abbb;--line:#2b3340}}
+:root[data-theme="dark"]{--bg:#12161d;--surface:#1b212b;--ink:#eef1f5;--muted:#a1abbb;--line:#2b3340}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:20px;align-items:center;padding:12px 24px;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-family:Georgia,serif;font-size:18px}
+nav a{text-decoration:none;color:var(--muted);font-size:14px}nav a:hover{color:var(--accent)}
+section{max-width:1040px;margin:0 auto;padding:64px 24px}
+h1{font:700 clamp(36px,6vw,64px)/1.05 Georgia,serif;margin:0 0 18px;letter-spacing:-.02em}
+h2{font:700 30px/1.2 Georgia,serif;margin:0 0 8px}
+.lead{font-size:18px;color:var(--muted);max-width:720px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:36px}
+.stat,.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stat b{display:block;font:700 34px Georgia,serif;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+.btn{display:inline-block;margin-top:24px;background:var(--accent);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:28px}
+.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14.5px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 14px}
+.tabs button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer;font:inherit;font-size:14px}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.persona{display:none}.persona.on{display:block}
+.persona ul{padding-left:20px;margin:10px 0 0}.persona li{margin:6px 0}
+.bars{margin-top:18px}.row{display:grid;grid-template-columns:110px 1fr 56px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.track{background:var(--line);border-radius:6px;height:20px;overflow:hidden}.fill{height:100%;border-radius:6px}
+.pill{display:inline-block;font-size:12px;background:var(--line);padding:2px 10px;border-radius:99px;margin-bottom:8px;color:var(--muted)}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13px;padding:32px 24px}
+@media(max-width:560px){section{padding:44px 18px}.row{grid-template-columns:90px 1fr 50px}}
+</style>
+</head>
+<body>
+<nav><b>⛽ Global Fuel Dashboard</b><a href="#overview">Overview</a><a href="#personas">Users</a><a href="#views">Dashboard views</a><a href="#insights">Insights</a><a href="#method">Method</a></nav>
+
+<section id="top">
+  <span class="tag">Data visualization project · 2020–2026</span>
+  <h1>What the world pays at the pump, and why.</h1>
+  <p class="lead">An interactive exploration of petrol, diesel and LPG prices, taxes and subsidies across 84 countries, built to give policy makers, logistics planners and researchers evidence they can act on.</p>
+  <div class="stats">
+    <div class="stat"><b>84</b><span>countries</span></div>
+    <div class="stat"><b>7</b><span>global regions</span></div>
+    <div class="stat"><b>27,468</b><span>complete records</span></div>
+    <div class="stat"><b>10</b><span>variables</span></div>
+    <div class="stat"><b>9</b><span>linked views</span></div>
+  </div>
+  <a class="btn" href="#views">Explore the views</a>
+</section>
+
+<section id="overview">
+  <span class="tag">Overview</span>
+  <h2>One dashboard, many questions</h2>
+  <p class="lead">The project examines how petrol, diesel and LPG prices relate to taxation structures, subsidy levels and national income, and what that means for economic and environmental outcomes. Geographic maps, trend lines with forecasts, comparative bars and heat maps work together in a single Tableau dashboard.</p>
+  <div class="grid">
+    <div class="card"><h3>Prices</h3><p>Petrol, diesel and LPG per litre in USD, by country, region and month.</p></div>
+    <div class="card"><h3>Taxes</h3><p>Average tax percentage of the pump price, compared across regions and income groups.</p></div>
+    <div class="card"><h3>Subsidies</h3><p>Subsidy levels from low to very high, and how they pull prices down.</p></div>
+    <div class="card"><h3>Income &amp; region</h3><p>Low, middle and high income nations across seven regions side by side.</p></div>
+  </div>
+</section>
+
+<section id="personas">
+  <span class="tag">Who it is for</span>
+  <h2>Three people, three lenses</h2>
+  <div class="tabs" role="tablist">
+    <button class="on" data-p="p1">Dr. Sarah Mitchell</button>
+    <button data-p="p2">Marcus Thompson</button>
+    <button data-p="p3">Prof. Elena Rodriguez</button>
+  </div>
+  <div class="card persona on" id="p1">
+    <span class="pill">Energy Policy Consultant</span>
+    <p>Advises government agencies on fuel taxation and subsidy policy, and needs defensible numbers to balance growth with environmental responsibility.</p>
+    <ul><li>Compare regional tax trends and spot policy disparities (Tax Map, Tax vs Subsidy)</li><li>See how subsidy level changes fuel prices (Subsidy vs Price)</li><li>Present clear evidence to government bodies and stakeholders</li></ul>
+  </div>
+  <div class="card persona" id="p2">
+    <span class="pill">Global Supply Chain Manager</span>
+    <p>Runs multi-continent logistics and must manage exposure to fuel price swings to keep transport costs down without hurting service.</p>
+    <ul><li>Find regions with favourable pricing (Top 10 / Bottom 10 countries)</li><li>Judge long-term direction with the diesel forecast</li><li>Assess risk with the volatility heat map</li></ul>
+  </div>
+  <div class="card persona" id="p3">
+    <span class="pill">Energy Economics Researcher</span>
+    <p>Studies how income, taxes and subsidies shape fuel prices, aiming to publish findings and guide development organisations.</p>
+    <ul><li>Test whether high-income nations tax differently (Tax by Income)</li><li>Examine subsidy mix by income group (Subsidy by Income)</li><li>Compare diesel, LPG and petrol prices by income (Price by Income)</li></ul>
+  </div>
+</section>
+
+<section id="views">
+  <span class="tag">The dashboard</span>
+  <h2>Nine linked views</h2>
+  <div class="grid">
+    <div class="card"><span class="pill">1</span><h3>Tax Map</h3><p>World map shaded by average tax percentage per country.</p></div>
+    <div class="card"><span class="pill">2</span><h3>Tax vs Subsidy</h3><p>Average tax percentage by region and subsidy level.</p></div>
+    <div class="card"><span class="pill">3</span><h3>Subsidy vs Price</h3><p>Average fuel price by subsidy level and region.</p></div>
+    <div class="card"><span class="pill">4</span><h3>Diesel Forecast</h3><p>Monthly diesel price trend by region with a forecast out to 2027.</p></div>
+    <div class="card"><span class="pill">5</span><h3>Top 10 / Bottom 10 Countries</h3><p>Countries ranked by average diesel price per litre.</p></div>
+    <div class="card"><span class="pill">6</span><h3>Volatility Heat Map</h3><p>Region by year colour grid showing how prices move.</p></div>
+    <div class="card"><span class="pill">7</span><h3>Tax by Income</h3><p>Average tax percentage for low, middle and high income groups.</p></div>
+    <div class="card"><span class="pill">8</span><h3>Subsidy by Income</h3><p>Share of subsidy levels within each income group.</p></div>
+    <div class="card"><span class="pill">9</span><h3>Price by Income</h3><p>Diesel, LPG and petrol prices by income level.</p></div>
+  </div>
+</section>
+
+<section id="insights">
+  <span class="tag">Selected findings</span>
+  <h2>What the dashboard shows</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Most expensive diesel (avg USD per litre)</h3>
+      <div class="bars" id="b1"></div>
+    </div>
+    <div class="card">
+      <h3>Average tax % by income level</h3>
+      <div class="bars" id="b2"></div>
+      <p style="margin-top:12px">High-income countries tax fuel noticeably more heavily than low- and middle-income ones.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Subsidies and prices move in opposite directions</h3>
+    <p>In the Subsidy vs Price view, average fuel prices fall steeply as subsidy levels rise: low-subsidy groups sit around 3 USD per litre in several regions, while very-high-subsidy groups drop to a fraction of a dollar.</p>
+  </div>
+</section>
+
+<section id="method">
+  <span class="tag">Method</span>
+  <h2>Built with</h2>
+  <p class="lead">Data from a global fuel prices dataset (27,468 complete records, 84 countries, 2020–2026), analysed and visualised in Tableau Public. The dashboard combines geographic maps, time-series forecasting, ranked bars, stacked proportions and heat maps, with filters linking the views so each persona can follow their own question.</p>
+</section>
+
+<footer>Global Fuel Dashboard · Fuel prices, taxation &amp; subsidies, 2020–2026</footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});
+document.querySelectorAll('.persona').forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');document.getElementById(b.dataset.p).classList.add('on');});});
+function bars(id,data,max,color,suffix){var h='';data.forEach(function(d){
+h+='<div class="row"><span>'+d[0]+'</span><div class="track"><div class="fill" style="width:'+(d[1]/max*100)+'%;background:'+(d[2]||color)+'"></div></div><b>'+d[1]+suffix+'</b></div>';});
+document.getElementById(id).innerHTML=h;}
+bars('b1',[['Hong Kong',5.097],['Ireland',4.545],['Norway',4.431],['Netherlands',4.323],['Denmark',4.321],['Singapore',4.211]],5.2,'var(--accent)','');
+bars('b2',[['Low',22.86,'var(--blue)'],['Middle',21.11,'var(--accent)'],['High',34.72,'var(--red)']],40,'','%');
+</script>
+</body>
+</html>
